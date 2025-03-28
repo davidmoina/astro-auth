@@ -8,13 +8,13 @@ if (!isUserLoggedIn || !user) {
   return Astro.redirect("/login");
 }
 
-const { name, email, avatar, emailVerified } = user;
+const { name, email, avatar } = user;
 
-// await firebaseUser.reload();
+const firebaseUser = firebase.auth.currentUser!;
 
-// const { displayName, email, emailVerified, photoURL } = firebaseUser;
+await firebaseUser.reload();
 
-// const name = displayName ?? "No name";
+const { emailVerified } = firebaseUser;
 ---
 
 <MainLayout>
