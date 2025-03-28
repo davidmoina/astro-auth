@@ -6,7 +6,7 @@ const { isUserLoggedIn } = Astro.locals;
   <h1 class="text-xl text-gray-800 font-bold">Auth App</h1>
   <div class="flex items-center">
     <ul class="flex items-center space-x-6">
-      <li class="font-semibold text-gray-700"><a href="/home">Home</a></li>
+      <li class="font-semibold text-gray-700"><a href="/">Home</a></li>
       {
         isUserLoggedIn && (
           <li class="font-semibold text-gray-700">
